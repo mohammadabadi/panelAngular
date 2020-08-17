@@ -1,0 +1,23 @@
+[
+    {
+      "outputFileName": "wwwroot/assets/global/css/site.min.css",
+      "inputFiles": [
+        "/app/assets/global/css/plugins.bundle.rtl.css",
+        "/app/assets/global/css/prismjs.bundle.rtl.css",
+        "/app/assets/global/css/style.bundle.rtl.css"
+      ]
+    },
+    {
+      "outputFileName": "wwwroot/assets/global/js/site.min.js",
+      "inputFiles": [
+        "/app/assets/global/js/plugins.bundle.js",
+        "/app/assets/global/js/prismjs.bundle.js",
+        "/app/assets/global/js/scripts.bundle.js"
+      ],
+      "minify": {
+        "enabled": true,
+        "renameLocals": true
+      }
+    }
+  ]
+  

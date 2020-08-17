@@ -1,0 +1,25 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a ui-sref="dashboard">خانه</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <a ui-sref="dashboard" data-ng-bind="$state.current.data.pageTitle"></a>
+        </li>
+    </ul>
+    <div class="page-toolbar" >
+    </div>
+</div>
+<h3 class="page-title" data-ng-bind="$state.current.data.pageTitle"></h3>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+    Dashboard.init();
+</script>
+<!-- BEGIN MAIN JS & CSS -->
