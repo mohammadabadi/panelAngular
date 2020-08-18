@@ -1,29 +1,19 @@
-module WebPanel.controllers {
-    interface IScope extends ng.IScope {
-        ctrl: any;
-        viewModel: any;
-    }
 
-    export class DashboardController {
-        // static $inject = ['$scope', '$rootScope', '$q', 'SpaceManagerService'];
-
-        // constructor(private $scope: IScope,
-        //     // private $rootScope: WebPanel.Common.Config.IRootScope,
-        //     private $q: ng.IQService) {
-        //     // set sidebar closed and body solid layout mode
-        //     // $rootScope.settings.layout.pageContentWhite = true;
-        //     // $rootScope.settings.layout.pageBodySolid = false;
-        //     // $rootScope.settings.layout.pageSidebarClosed = false;
-
-        //     // $scope.$on('$viewContentLoaded', function () {
-        //     //     // initialize core components
-        //     //     App.initAjax();
-        //     // });
-
-        //     this.$scope.ctrl = this;
-        // }
-
+module WebPanel {
+    //    'use strict'
+    export class dashboardController {
+        private apiBaseUrl: string;
+        private routeUrl: string;
+        static $inject = ['$scope'];
+        constructor(
+            private $scope: any) {
+            $scope.ctrl = this;
+            this.apiBaseUrl = "";
+            $scope.mas = 'DashboardController';
+        }
 
     }
-    angular.module('App').controller('dashboardController', DashboardController);
+
+    WebPanel.Main.webApp.controller('dashboardController', dashboardController);
+
 }

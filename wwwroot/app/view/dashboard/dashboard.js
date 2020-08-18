@@ -14,10 +14,10 @@ var Dashboard = function () {
 
 }();
 
-Dashboard.init();
-// jQuery(document).ready(function () {
-//     Dashboard.init(); // init metronic core componets
-// });
+jQuery(document).ready(function () {
+    Dashboard.init(); // init metronic core componets
+});
+
 // if (App.isAngularJsApp() === false) {
 //     jQuery(document).ready(function () {
 //         Dashboard.init(); // init metronic core componets

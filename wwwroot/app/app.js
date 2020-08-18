@@ -4,204 +4,57 @@ var WebPanel;
         function Routes() {
         }
         Routes.configureRoutes = function ($stateProvider, $urlRouterProvider, $locationProvider) {
-            var basePaths = '/app';
-            // Redirect any unmatched url
-            //$urlRouterProvider.otherwise("/dashboard");
-            // $stateProvider
-            //     // Dashboard
-            //     .state('dashboard', {
-            //         url: "/dashboard",
-            //         templateUrl: basePaths + '/index.html',
-            //         data: { pageTitle: 'پنل مدیریت' },
-            //         controller: "dashboardController"
-            //         // resolve: {
-            //         //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //         //         return $ocLazyLoad.load({
-            //         //             name: 'WebApp',
-            //         //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-            //         //             files: [
-            //         //                 basePaths + 'view/dashboard/dashboard.js',
-            //         //                 basePaths + 'view/dashboard/dashboardController.js',
-            //         //             ]
-            //         //         });
-            //         //     }]
-            //         // }
-            //     });
-            //tickets
-            // .state('tickets', {
-            //     url: "/tickets",
-            //     templateUrl: basePaths + "view/tickets/tickets-list/index.html",
-            //     data: {
-            //         pageTitle: 'مدیریت تیکت ها',
-            //         breadcrumds: [
-            //             {
-            //                 pageTitle: 'مدیریت تیکت ها',
-            //                 pageUrl: 'tickets',
-            //             }
-            //         ]
-            //     },
-            //     controller: "ticketsController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/tickets/tickets-list/tickets-list.config.js',
-            //                     basePaths + '/tickets/tickets-list/tickets-list.controller.js'
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // })
-            //tickets add
-            // .state('tickets-add', {
-            //     url: "/tickets/add",
-            //     templateUrl: basePaths + "/tickets/tickets-add/index.html",
-            //     data: {
-            //         pageTitle: 'ثبت تیکت',
-            //         breadcrumds: [
-            //             {
-            //                 pageTitle: 'مدیریت تیکت ها',
-            //                 pageUrl: 'tickets',
-            //             },
-            //             {
-            //                 pageTitle: 'ثبت تیکت',
-            //                 pageUrl: 'tickets-add',
-            //             }
-            //         ]
-            //     },
-            //     controller: "ticketsAddController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/tickets/tickets-add/tickets-add.config.js',
-            //                     basePaths + '/tickets/tickets-add/tickets-add.controller.js'
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // })
-            //tickets details
-            // .state('tickets-details', {
-            //     url: "/tickets/:id/details",
-            //     templateUrl: basePaths + "/tickets/tickets-details/index.html",
-            //     data: {
-            //         pageTitle: ' مشاهده تیکت',
-            //         breadcrumds: [
-            //             {
-            //                 pageTitle: 'مدیریت تیکت ها',
-            //                 pageUrl: 'tickets',
-            //             },
-            //             {
-            //                 pageTitle: ' مشاهده تیکت',
-            //                 pageUrl: 'tickets-details',
-            //             }
-            //         ]
-            //     },
-            //     controller: "ticketsDetailsController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/tickets/tickets-details/tickets-details.config.js',
-            //                     basePaths + '/tickets/tickets-details/tickets-details.controller.js'
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // })
-            //wiki spaces manager
-            // .state('wiki-spaces', {
-            //     url: "/wiki/spaces",
-            //     templateUrl: basePaths + "/wiki/spaces-manager/index.html",
-            //     data: {
-            //         pageTitle: 'مشاهده فضا های دایرکتوری',
-            //         breadcrumds: [
-            //             {
-            //                 pageTitle: 'مشاهده فضا های دایرکتوری',
-            //                 pageUrl: 'wiki-spaces',
-            //             }
-            //         ]
-            //     },
-            //     controller: "wikiSpaceManagerController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/wiki/spaces-manager/space-manager.config.js',
-            //                     basePaths + '/wiki/spaces-manager/space-manager.Controller.js'
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // })
-            // .state('wiki-spaces.edit', {
-            //     url: "/:id/edit",
-            //     templateUrl: basePaths + "/wiki/spaces-manager/partials/dialog-new-space.html",
-            // })
-            // .state('wiki-spaces.add', {
-            //     url: "/add",
-            //     templateUrl: basePaths + "/wiki/spaces-manager/partials/dialog-new-space.html",
-            // })
-            //wiki pages manager
-            // .state('wiki-pages', {
-            //     url: "/wiki/spaces/:spaceId/pages",
-            //     templateUrl: basePaths + "/wiki/pages-manager/index.html",
-            //     data: {
-            //         pageTitle: 'مدیریت صفحات',
-            //         breadcrumds: [
-            //             {
-            //                 pageTitle: 'مشاهده فضا های دایرکتوری',
-            //                 pageUrl: 'wiki-spaces',
-            //             },
-            //             {
-            //                 pageTitle: ' مدیریت صفحات',
-            //                 pageUrl: 'wiki-pages',
-            //             }
-            //         ]
-            //     },
-            //     controller: "wikiPageManagerController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/wiki/pages-manager/pages-manager.config.js',
-            //                     basePaths + '/wiki/pages-manager/pages-manager.controller.js',
-            //                     basePaths + '/wiki/pages-manager/pages-manager.style.css',
-            //                     '/lib/dropify/dist/css/dropify.css',
-            //                     '/lib/dropify/dist/js/dropify.min.js',
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // })
-            // .state('wiki-pages.contents', {
-            //     url: "/:pageId/contents",
-            //     templateUrl: basePaths + "/wiki/page-contents-manager/index.html",
-            //     controller: "wikiPageContentsManagerController",
-            //     resolve: {
-            //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-            //             return $ocLazyLoad.load({
-            //                 name: 'WebApp',
-            //                 insertBefore: '#ng_load_plugins_before',
-            //                 files: [
-            //                     basePaths + '/wiki/page-contents-manager/page-contents-manager.config.js',
-            //                     basePaths + '/wiki/page-contents-manager/page-contents-manager.controller.js',
-            //                 ]
-            //             });
-            //         }]
-            //     }
-            // });
+            var basePaths = '/app/view';
+            $urlRouterProvider.otherwise("/dashboard");
+            $stateProvider
+                // Dashboard
+                .state('dashboard', {
+                url: "/dashboard",
+                templateUrl: basePaths + '/dashboard/dashboard.html',
+                data: { pageTitle: 'پنل مدیریت' },
+                controller: "dashboardController"
+                // resolve: {
+                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                //         return $ocLazyLoad.load({
+                //             name: 'WebApp',
+                //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                //             files: [
+                //                 basePaths + '/dashboard/dashboard.js',
+                //                 basePaths + '/dashboard/dashboardController.js',
+                //             ]
+                //         });
+                //     }]
+                // }
+            })
+                //transaction
+                .state('transaction', {
+                url: "/transaction",
+                templateUrl: basePaths + "/accounting/transaction/transaction.html",
+                data: {
+                    pageTitle: 'مدیریت سند ها'
+                },
+                controller: "TransactionController"
+                // resolve:{
+                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                //         return $ocLazyLoad.load({
+                //             name: 'WebApp',
+                //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                //             files: [
+                //                 basePaths + '/view/accounting/TransactionController.ts',
+                //                 ]
+                //         });
+                //     }]
+                // }
+            })
+                //transactionDetail
+                .state('transactionDetail', {
+                url: "/accounting/transactionDetail",
+                templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
+                data: {
+                    pageTitle: 'دفتر روزنامه'
+                },
+                controller: "TransactionDetailController"
+            });
             //$locationProvider.html5Mode({
             //    enabled: true,
             //    requireBase: false
@@ -219,53 +72,226 @@ var WebPanel;
         function Main() {
         }
         Main.baseUrl = {
-            api: "http://accounting.dayanshop.org/Api/",
+            api: "http://accounting.dayanshop.org/Api/"
+            //api: "http://localhost:58564/Api/",
+            //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
         };
         Main.webApp = angular.module('webApp', ["ui.router",
             "ui.bootstrap",
-            "oc.lazyLoad"
-        ]);
+            "ngTable",
+            "elif"
+        ])
+            /* Configure ocLazyLoader(refer: https://github.com/ocombe/ocLazyLoad) */
+            //  .config(['$ocLazyLoadProvider', function ($ocLazyLoadProvider) {
+            //      $ocLazyLoadProvider.config({
+            //          // global configs go here
+            //      });
+            //  }])
+            //AngularJS v1.3.x workaround for old style controller declarition in HTML
+            //  .config(['$controllerProvider', function ($controllerProvider) {
+            //      // this option might be handy for migrating old apps, but please don't use it
+            //      // in new ones!
+            //      $controllerProvider.allowGlobals();
+            //  }])
+            // toastr config
+            //  .config(function (toastrConfig) {
+            //     angular.extend(toastrConfig, {
+            //         autoDismiss: false,
+            //         containerId: 'toast-container',
+            //         maxOpened: 0,
+            //         newestOnTop: true,
+            //         positionClass: 'toast-top-left',
+            //         preventDuplicates: false,
+            //         preventOpenDuplicates: false,
+            //         target: 'body'
+            //     });
+            // })
+            // Routing
+            .config(WebPanel.Routes.configureRoutes);
         return Main;
     }());
     WebPanel.Main = Main;
 })(WebPanel || (WebPanel = {}));
 //# sourceMappingURL=app.module.js.map
-var Dashboard = function () {
-
-    return {
-
-        initTest: function () {
-
-        },
-
-        init: function () {
-
-            this.initTest();
-        }
-    };
-
-}();
-
-Dashboard.init();
-// jQuery(document).ready(function () {
-//     Dashboard.init(); // init metronic core componets
-// });
-// if (App.isAngularJsApp() === false) {
-//     jQuery(document).ready(function () {
-//         Dashboard.init(); // init metronic core componets
-//     });
-// }
 var WebPanel;
 (function (WebPanel) {
-    var controllers;
-    (function (controllers) {
-        var DashboardController = /** @class */ (function () {
-            function DashboardController() {
-            }
-            return DashboardController;
-        }());
-        controllers.DashboardController = DashboardController;
-        angular.module('webApp').controller('dashboardController', DashboardController);
-    })(controllers = WebPanel.controllers || (WebPanel.controllers = {}));
+    //    'use strict'
+    var AppController = /** @class */ (function () {
+        function AppController($scope) {
+            this.$scope = $scope;
+            $scope.ctrl = this;
+            this.apiBaseUrl = "";
+            // this.routeUrl = "/Accounting/@index.dn/";
+            $scope.hello = 'hello fdsfdf';
+        }
+        AppController.$inject = ['$scope'];
+        return AppController;
+    }());
+    WebPanel.AppController = AppController;
+    WebPanel.Main.webApp.controller('AppController', AppController);
+})(WebPanel || (WebPanel = {}));
+//# sourceMappingURL=AppController.js.map
+var WebPanel;
+(function (WebPanel) {
+    //    'use strict'
+    var dashboardController = /** @class */ (function () {
+        function dashboardController($scope) {
+            this.$scope = $scope;
+            $scope.ctrl = this;
+            this.apiBaseUrl = "";
+            $scope.mas = 'DashboardController';
+        }
+        dashboardController.$inject = ['$scope'];
+        return dashboardController;
+    }());
+    WebPanel.dashboardController = dashboardController;
+    WebPanel.Main.webApp.controller('dashboardController', dashboardController);
 })(WebPanel || (WebPanel = {}));
 //# sourceMappingURL=dashboardController.js.map
+/// <reference path="transactionmodels.ts" />
+var Accounting;
+(function (Accounting) {
+    var TransactionController = /** @class */ (function () {
+        function TransactionController($scope, $http) {
+            this.$scope = $scope;
+            this.$http = $http;
+            this.apiBaseUrl = WebPanel.Main.baseUrl.api;
+            this.pageNumber = 0;
+            this.pageSize = 20;
+            this.totalCount = 0;
+            $scope.ctrl = this;
+            $scope.xxx = "hello";
+            this.getList(this.pageNumber);
+        }
+        TransactionController.prototype.getList = function (pageNumber) {
+            var _this = this;
+            this.pageNumber = pageNumber;
+            var searchDto = {
+                Offset: this.pageNumber == 0 ? 0 : this.pageSize * this.pageNumber,
+                PageSize: this.pageSize
+            };
+            return this.$http.post(this.apiBaseUrl + "transaction/GetList", searchDto)
+                .then(function (result) {
+                if (result.data.IsSuccess) {
+                    _this.transactions = result.data.Data.items;
+                    _this.totalCount = result.data.Data.totalCount;
+                }
+            }).catch(function (result) { console.log(result); });
+        };
+        TransactionController.$inject = ['$scope', '$http'];
+        return TransactionController;
+    }());
+    Accounting.TransactionController = TransactionController;
+    WebPanel.Main.webApp.controller('TransactionController', TransactionController).filter('pageNumbers', function () {
+        return function (array, currentPageNumber, pageSize, total) {
+            var list = [];
+            if (total == undefined)
+                return list;
+            var count = 4;
+            var start = Math.max(1, currentPageNumber - count);
+            var l = Math.ceil(total / pageSize);
+            var last = Math.min(l, currentPageNumber + count);
+            //if (start > 1) {
+            //    list.push(1);
+            //    list.push("<<<");
+            //}
+            for (var i = start; i <= last; i++) {
+                list.push(i);
+            }
+            //if (last < l) {
+            //    list.push(">>>");
+            //    list.push(l);
+            //}
+            return list;
+        };
+    });
+})(Accounting || (Accounting = {}));
+//# sourceMappingURL=TransactionController.js.map
+var Accounting;
+(function (Accounting) {
+    var TransactionDto = /** @class */ (function () {
+        function TransactionDto() {
+        }
+        return TransactionDto;
+    }());
+    Accounting.TransactionDto = TransactionDto;
+    var TransactionSearchDto = /** @class */ (function () {
+        function TransactionSearchDto() {
+        }
+        return TransactionSearchDto;
+    }());
+    Accounting.TransactionSearchDto = TransactionSearchDto;
+})(Accounting || (Accounting = {}));
+//# sourceMappingURL=transactionmodels.js.map
+var Accounting;
+(function (Accounting) {
+    var TransactionDetailController = /** @class */ (function () {
+        function TransactionDetailController($scope, $http) {
+            this.$scope = $scope;
+            this.$http = $http;
+            this.apiBaseUrl = WebPanel.Main.baseUrl.api;
+            this.pageNumber = 0;
+            this.pageSize = 20;
+            this.totalCount = 0;
+            this.searchDto = { Offset: 0, PageSize: this.pageSize };
+            $scope.ctrl = this;
+            this.getList(this.pageNumber);
+        }
+        TransactionDetailController.prototype.getList = function (pageNumber) {
+            var _this = this;
+            this.pageNumber = pageNumber;
+            this.searchDto.Offset = this.pageNumber == 0 ? 0 : this.pageSize * this.pageNumber;
+            this.searchDto.PageSize = this.pageSize;
+            return this.$http.post(this.apiBaseUrl + "transactionDetail/GetList", this.searchDto)
+                .then(function (result) {
+                if (result.data.IsSuccess) {
+                    _this.transactionDetails = result.data.Data.items;
+                    _this.totalCount = result.data.Data.totalCount;
+                }
+            }).catch(function (result) { console.log(result); });
+        };
+        TransactionDetailController.$inject = ['$scope', '$http'];
+        return TransactionDetailController;
+    }());
+    Accounting.TransactionDetailController = TransactionDetailController;
+    WebPanel.Main.webApp.controller('TransactionDetailController', TransactionDetailController).filter('pageNumbers', function () {
+        return function (array, currentPageNumber, pageSize, total) {
+            var list = [];
+            if (total == undefined)
+                return list;
+            var count = 4;
+            var start = Math.max(1, currentPageNumber - count);
+            var l = Math.ceil(total / pageSize);
+            var last = Math.min(l, currentPageNumber + count);
+            //if (start > 1) {
+            //    list.push(1);
+            //    list.push("<<<");
+            //}
+            for (var i = start; i <= last; i++) {
+                list.push(i);
+            }
+            //if (last < l) {
+            //    list.push(">>>");
+            //    list.push(l);
+            //}
+            return list;
+        };
+    });
+})(Accounting || (Accounting = {}));
+//# sourceMappingURL=TransactionDetailController.js.map
+var Accounting;
+(function (Accounting) {
+    var TransactionDetailDto = /** @class */ (function () {
+        function TransactionDetailDto() {
+        }
+        return TransactionDetailDto;
+    }());
+    Accounting.TransactionDetailDto = TransactionDetailDto;
+    var TransactionDetailSearchDto = /** @class */ (function () {
+        function TransactionDetailSearchDto() {
+        }
+        return TransactionDetailSearchDto;
+    }());
+    Accounting.TransactionDetailSearchDto = TransactionDetailSearchDto;
+})(Accounting || (Accounting = {}));
+//# sourceMappingURL=TransactionDetailModels.js.map

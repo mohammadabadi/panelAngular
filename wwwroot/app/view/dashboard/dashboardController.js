@@ -1,14 +1,17 @@
 var WebPanel;
 (function (WebPanel) {
-    var controllers;
-    (function (controllers) {
-        var DashboardController = /** @class */ (function () {
-            function DashboardController() {
-            }
-            return DashboardController;
-        }());
-        controllers.DashboardController = DashboardController;
-        angular.module('webApp').controller('dashboardController', DashboardController);
-    })(controllers = WebPanel.controllers || (WebPanel.controllers = {}));
+    //    'use strict'
+    var dashboardController = /** @class */ (function () {
+        function dashboardController($scope) {
+            this.$scope = $scope;
+            $scope.ctrl = this;
+            this.apiBaseUrl = "";
+            $scope.mas = 'DashboardController';
+        }
+        dashboardController.$inject = ['$scope'];
+        return dashboardController;
+    }());
+    WebPanel.dashboardController = dashboardController;
+    WebPanel.Main.webApp.controller('dashboardController', dashboardController);
 })(WebPanel || (WebPanel = {}));
 //# sourceMappingURL=dashboardController.js.map
