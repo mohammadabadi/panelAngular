@@ -10,7 +10,7 @@ var Accounting;
             this.pageSize = 20;
             this.totalCount = 0;
             $scope.ctrl = this;
-            $scope.xxx = "hello";
+            //$scope.xxx= "hello";
             this.getList(this.pageNumber);
         }
         TransactionController.prototype.getList = function (pageNumber) {

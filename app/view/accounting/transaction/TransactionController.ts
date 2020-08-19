@@ -9,7 +9,7 @@ module Accounting {
         static $inject = ['$scope', '$http'];
         constructor(private $scope, private $http: ng.IHttpService) {
             $scope.ctrl = this;
-            $scope.xxx= "hello";
+            //$scope.xxx= "hello";
             this.getList(this.pageNumber);
         }
         getList(pageNumber: number) {

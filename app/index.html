@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="webApp" direction="rtl" dir="rtl" style="direction: rtl">
+<html ng-app="webApp" direction="rtl" dir="rtl" style="direction: rtl" ng-controller="AppController">
     <head>
         <base href="/">
+        <title>{{pageName}}</title>
         <meta http-equiv="Content-Language" content="fa" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
         <!-- End Global Css-->
         <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     </head>
-    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading" ng-controller="AppController">
+    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
         	<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->

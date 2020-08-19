@@ -31,9 +31,7 @@ var WebPanel;
                 .state('transaction', {
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
-                data: {
-                    pageTitle: 'مدیریت سند ها'
-                },
+                data: { pageTitle: 'مدیریت سند ها' },
                 controller: "TransactionController"
                 // resolve:{
                 //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -51,9 +49,7 @@ var WebPanel;
                 .state('transactionDetail', {
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
-                data: {
-                    pageTitle: 'دفتر روزنامه'
-                },
+                data: { pageTitle: 'دفتر روزنامه' },
                 controller: "TransactionDetailController"
             });
             // $locationProvider.html5Mode({

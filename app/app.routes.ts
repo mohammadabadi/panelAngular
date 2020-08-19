@@ -4,10 +4,7 @@ module WebPanel {
         static configureRoutes($stateProvider: any, $urlRouterProvider: any, $locationProvider: any) {
             var basePaths = '/view';
             $urlRouterProvider.otherwise("/dashboard");
-           
             $locationProvider.hashPrefix('');
-            
-            
             $stateProvider
            // Dashboard
                 .state('dashboard', {
@@ -32,9 +29,7 @@ module WebPanel {
                 .state('transaction', {
                     url: "/transaction",
                     templateUrl: basePaths + "/accounting/transaction/transaction.html",
-                    data: {
-                        pageTitle: 'مدیریت سند ها'
-                    },
+                    data: {pageTitle: 'مدیریت سند ها'},
                     controller: "TransactionController"
                     // resolve:{
                     //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -52,9 +47,7 @@ module WebPanel {
                 .state('transactionDetail', {
                     url: "/transactionDetail",
                     templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
-                    data: {
-                        pageTitle: 'دفتر روزنامه'
-                    },
+                    data: {pageTitle: 'دفتر روزنامه'},
                     controller: "TransactionDetailController"
 
                 });

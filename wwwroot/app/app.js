@@ -31,9 +31,7 @@ var WebPanel;
                 .state('transaction', {
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
-                data: {
-                    pageTitle: 'مدیریت سند ها'
-                },
+                data: { pageTitle: 'مدیریت سند ها' },
                 controller: "TransactionController"
                 // resolve:{
                 //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -51,9 +49,7 @@ var WebPanel;
                 .state('transactionDetail', {
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
-                data: {
-                    pageTitle: 'دفتر روزنامه'
-                },
+                data: { pageTitle: 'دفتر روزنامه' },
                 controller: "TransactionDetailController"
             });
             // $locationProvider.html5Mode({
@@ -127,6 +123,7 @@ var WebPanel;
             this.apiBaseUrl = "";
             // this.routeUrl = "/Accounting/@index.dn/";
             $scope.hello = 'hello fdsfdf';
+            $scope.pageName = "پنل مدیریت | ";
         }
         AppController.$inject = ['$scope'];
         return AppController;
@@ -144,6 +141,7 @@ var WebPanel;
             $scope.ctrl = this;
             this.apiBaseUrl = "";
             $scope.mas = 'DashboardنتمختControllerمنن';
+            $scope.pageName = $scope.state.data.pageTitle;
         }
         dashboardController.$inject = ['$scope'];
         return dashboardController;
@@ -164,7 +162,7 @@ var Accounting;
             this.pageSize = 20;
             this.totalCount = 0;
             $scope.ctrl = this;
-            $scope.xxx = "hello";
+            //$scope.xxx= "hello";
             this.getList(this.pageNumber);
         }
         TransactionController.prototype.getList = function (pageNumber) {

@@ -4,12 +4,14 @@ module WebPanel {
     export class dashboardController {
         private apiBaseUrl: string;
         private routeUrl: string;
+        private pageName:string;
         static $inject = ['$scope'];
         constructor(
             private $scope: any) {
             $scope.ctrl = this;
             this.apiBaseUrl = "";
             $scope.mas = 'DashboardنتمختControllerمنن';
+            $scope.pageName = $scope.state.data.pageTitle;
         }
 
     }
