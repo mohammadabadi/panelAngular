@@ -2,8 +2,12 @@ module WebPanel {
     export class Routes {
         static $inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
         static configureRoutes($stateProvider: any, $urlRouterProvider: any, $locationProvider: any) {
-            var basePaths = '/app/view';
+            var basePaths = '/view';
             $urlRouterProvider.otherwise("/dashboard");
+           
+            $locationProvider.hashPrefix('');
+            
+            
             $stateProvider
            // Dashboard
                 .state('dashboard', {
@@ -46,7 +50,7 @@ module WebPanel {
                  })
             //transactionDetail
                 .state('transactionDetail', {
-                    url: "/accounting/transactionDetail",
+                    url: "/transactionDetail",
                     templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                     data: {
                         pageTitle: 'دفتر روزنامه'
@@ -56,10 +60,10 @@ module WebPanel {
                 });
 
             
-            //$locationProvider.html5Mode({
+            // $locationProvider.html5Mode({
             //    enabled: true,
             //    requireBase: false
-            //});
+            // });
         }
     }
 }

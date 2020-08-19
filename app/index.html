@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="webApp" direction="rtl" dir="rtl" style="direction: rtl">
     <head>
-        <!-- <base href="../"> -->
+        <base href="/">
         <meta http-equiv="Content-Language" content="fa" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Start Global Css-->
-        <link rel="stylesheet" href="app/assets/global/css/plugins.bundlec.rtl.css">
-        <link rel="stylesheet" href="assets/global/css/prismjs.bundlec.rtl.css">
-        <link rel="stylesheet" href="assets/global/css/style.bundlec.rtl.css">
+        <link rel="stylesheet" href="assets/global/css/plugins.bundle.rtl.css">
+        <link rel="stylesheet" href="assets/global/css/prismjs.bundle.rtl.css">
+        <link rel="stylesheet" href="assets/global/css/style.bundle.rtl.css">
         <!--begin::Layout Themes(used by all pages)-->
 		<link href="assets/global/css/lightBase.rtl.css" rel="stylesheet" type="text/css" />
 		<link href="assets/global/css/lightMenu.rtl.css" rel="stylesheet" type="text/css" />
@@ -19,7 +19,7 @@
         <!-- End Global Css-->
         <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     </head>
-    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"ng-controller="AppController">
+    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading" ng-controller="AppController">
         	<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
@@ -65,7 +65,7 @@
                     <!--begin::Brand-->
                     <div class="brand flex-column-auto" id="kt_brand">
                         <!--begin::Logo-->
-                        <a ng-href="/dashboard" class="brand-logo">
+                        <a ng-href="/#/dashboard" class="brand-logo">
                             <img alt="Logo" src="/assets/media/logos/logo-light.png" style="max-width: 175px;">
                         </a>
                         <!--end::Logo-->
@@ -114,13 +114,8 @@
                     <div class="d-flex flex-column-fluid">
                         <!--begin::Container-->
                         <div class="container-fluid">
-                            {{hello}}
                             <!--begin::Dashboard-->
-                            <md-content md-scroll-y layout="column" flex layout-padding style="background-color:rgb(250,250,250)">
-                                <section ui-view style="margin-bottom:80px;">
-                                aaaa
-                                </section>
-                            </md-content>
+                            <ui-view></ui-view>
                             <!--end::Dashboard-->
                         </div>
                         <!--end::Container-->
@@ -148,24 +143,28 @@
         <!-- End Jquery-->
         <!-- Start Global AngularJs -->
         <script src="assets/global/angular/angular.js"></script>
-        <script src="assets/global/angular/angular-route.js"></script>
+        <script src="assets/global/angular/angular-sanitize.js"></script>
+        <!-- <script src="assets/global/angular/angular-route.js"></script>
         <script src="assets/global/angular/angular-animate.js"></script>
         <script src="assets/global/angular/angular-cookies.js"></script>
-        <script src="assets/global/angular/angular-sanitize.js"></script>
+        
         <script src="assets/global/angular/angular-touch.js"></script>
         <script src="assets/global/angular/angular-loader.js"></script>
         <script src="assets/global/angular/angular-messages.js"></script>
         <script src="assets/global/angular/angular-message-format.js"></script>
         <script src="assets/global/angular/angular-mocks.js"></script>
-        <script src="assets/global/angular/angular-resource.js"></script>
+        <script src="assets/global/angular/angular-resource.js"></script> -->
+        <!-- <script src="assets/global/angular/angularjs/angular-sanitize.min.js" type="text/javascript"></script> -->
+        <script src="assets/global/angular/angularjs/angular-touch.min.js" type="text/javascript"></script>
         <script src="assets/global/angular/angularjs/plugins/angular-ui-router.min.js"></script>
         <script src="assets/global/angular/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
-        <script src="assets/global/angular/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
-        <script src="assets/global/angular/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
-        <script src="assets/global/angular/angularjs/angular-touch.min.js" type="text/javascript"></script>
+        <script src="assets/global/angular/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>  
         <script src="assets/global/angular/angularjs/plugins/elif.js"></script>
         <link href="assets/global/angular/ng-table/ng-table.min.css" rel="stylesheet" />
         <script src="assets/global/angular/ng-table/ng-table.min.js"></script>
+        <link href="assets/global/angular/angular-toastr/dist/angular-toastr.min.css" rel="stylesheet" />
+        <script src="assets/global/angular/angular-toastr/dist/angular-toastr.min.js"></script>
+        <script src="assets/global/angular/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
         <!-- End Global AngularJs -->
         <!-- Start App JS-->
         <script src="app.js"></script>

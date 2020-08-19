@@ -9,7 +9,7 @@ module WebPanel {
             private $scope: any) {
             $scope.ctrl = this;
             this.apiBaseUrl = "";
-            $scope.mas = 'DashboardController';
+            $scope.mas = 'DashboardنتمختControllerمنن';
         }
 
     }

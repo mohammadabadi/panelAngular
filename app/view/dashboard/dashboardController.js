@@ -6,7 +6,7 @@ var WebPanel;
             this.$scope = $scope;
             $scope.ctrl = this;
             this.apiBaseUrl = "";
-            $scope.mas = 'DashboardController';
+            $scope.mas = 'DashboardنتمختControllerمنن';
         }
         dashboardController.$inject = ['$scope'];
         return dashboardController;

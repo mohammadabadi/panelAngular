@@ -4,8 +4,9 @@ var WebPanel;
         function Routes() {
         }
         Routes.configureRoutes = function ($stateProvider, $urlRouterProvider, $locationProvider) {
-            var basePaths = '/app/view';
+            var basePaths = '/view';
             $urlRouterProvider.otherwise("/dashboard");
+            $locationProvider.hashPrefix('');
             $stateProvider
                 // Dashboard
                 .state('dashboard', {
@@ -48,17 +49,17 @@ var WebPanel;
             })
                 //transactionDetail
                 .state('transactionDetail', {
-                url: "/accounting/transactionDetail",
+                url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                 data: {
                     pageTitle: 'دفتر روزنامه'
                 },
                 controller: "TransactionDetailController"
             });
-            //$locationProvider.html5Mode({
+            // $locationProvider.html5Mode({
             //    enabled: true,
             //    requireBase: false
-            //});
+            // });
         };
         Routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
         return Routes;
