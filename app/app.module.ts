@@ -1,10 +1,10 @@
 module WebPanel {
     export class Main {  
-        static baseUrl = {
-            api: "http://accounting.dayanshop.org/Api/"
-            //api: "http://localhost:58564/Api/",
-            //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
-        }
+        // static baseUrl = {
+        //     api: "http://accounting.dayanshop.org/Api/"
+        //     //api: "http://localhost:58564/Api/",
+        //     //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
+        // }
         static webApp = angular.module('webApp', ["ui.router",
         "ui.bootstrap",   
         "oc.lazyLoad",

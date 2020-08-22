@@ -7,7 +7,7 @@ var WebPanel;
             $scope.ctrl = this;
             this.apiBaseUrl = "";
             $scope.mas = 'DashboardنتمختControllerمنن';
-            $scope.pageName = $scope.state.data.pageTitle;
+            // $scope.pageName = $scope.state.pageTitle;
         }
         dashboardController.$inject = ['$scope'];
         return dashboardController;

@@ -2,7 +2,6 @@
   "name": "allpanel",
   "version": "1.0.0",
   "description": "How To Show All Of MicroService Backend In On Page(AngularJs)",
-
   "dependencies": {
     "@types/angular": "^1.7.2",
     "@types/angular-route": "^1.7.1",

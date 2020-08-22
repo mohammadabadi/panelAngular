@@ -4,7 +4,7 @@ var Accounting;
         function TransactionDetailController($scope, $http) {
             this.$scope = $scope;
             this.$http = $http;
-            this.apiBaseUrl = WebPanel.Main.baseUrl.api;
+            this.apiBaseUrl = Api.Acounting.baseUrl.api;
             this.pageNumber = 0;
             this.pageSize = 20;
             this.totalCount = 0;

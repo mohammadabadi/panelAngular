@@ -32,17 +32,17 @@ var WebPanel;
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
                 data: { pageTitle: 'مدیریت سند ها' },
-                controller: "TransactionController"
-                // resolve:{
+                controller: "TransactionController",
+                // resolve: {
                 //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                //         return $ocLazyLoad.load({
-                //             name: 'WebApp',
-                //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                //             files: [
-                //                 basePaths + '/view/accounting/TransactionController.ts',
+                //             return $ocLazyLoad.load({
+                //                 name: 'WebApp',
+                //                 insertBefore: '#ng_load_plugins_before',
+                //                 files: [
+                //                     basePaths + '/api/Api.ts',
                 //                 ]
-                //         });
-                //     }]
+                //             });
+                //         }]
                 // }
             })
                 //transactionDetail
@@ -50,7 +50,18 @@ var WebPanel;
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                 data: { pageTitle: 'دفتر روزنامه' },
-                controller: "TransactionDetailController"
+                controller: "TransactionDetailController",
+                // resolve: {
+                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                //             return $ocLazyLoad.load({
+                //                 name: 'WebApp',
+                //                 insertBefore: '#ng_load_plugins_before',
+                //                 files: [
+                //                     basePaths + '/api/Api.ts',
+                //                 ]
+                //             });
+                //         }]
+                // }
             });
             // $locationProvider.html5Mode({
             //    enabled: true,

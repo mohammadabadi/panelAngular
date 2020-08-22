@@ -32,17 +32,17 @@ var WebPanel;
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
                 data: { pageTitle: 'مدیریت سند ها' },
-                controller: "TransactionController"
-                // resolve:{
+                controller: "TransactionController",
+                // resolve: {
                 //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                //         return $ocLazyLoad.load({
-                //             name: 'WebApp',
-                //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                //             files: [
-                //                 basePaths + '/view/accounting/TransactionController.ts',
+                //             return $ocLazyLoad.load({
+                //                 name: 'WebApp',
+                //                 insertBefore: '#ng_load_plugins_before',
+                //                 files: [
+                //                     basePaths + '/api/Api.ts',
                 //                 ]
-                //         });
-                //     }]
+                //             });
+                //         }]
                 // }
             })
                 //transactionDetail
@@ -50,7 +50,18 @@ var WebPanel;
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                 data: { pageTitle: 'دفتر روزنامه' },
-                controller: "TransactionDetailController"
+                controller: "TransactionDetailController",
+                // resolve: {
+                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                //             return $ocLazyLoad.load({
+                //                 name: 'WebApp',
+                //                 insertBefore: '#ng_load_plugins_before',
+                //                 files: [
+                //                     basePaths + '/api/Api.ts',
+                //                 ]
+                //             });
+                //         }]
+                // }
             });
             // $locationProvider.html5Mode({
             //    enabled: true,
@@ -68,11 +79,11 @@ var WebPanel;
     var Main = /** @class */ (function () {
         function Main() {
         }
-        Main.baseUrl = {
-            api: "http://accounting.dayanshop.org/Api/"
-            //api: "http://localhost:58564/Api/",
-            //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
-        };
+        // static baseUrl = {
+        //     api: "http://accounting.dayanshop.org/Api/"
+        //     //api: "http://localhost:58564/Api/",
+        //     //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
+        // }
         Main.webApp = angular.module('webApp', ["ui.router",
             "ui.bootstrap",
             "oc.lazyLoad",
@@ -132,6 +143,21 @@ var WebPanel;
     WebPanel.Main.webApp.controller('AppController', AppController);
 })(WebPanel || (WebPanel = {}));
 //# sourceMappingURL=AppController.js.map
+var Api;
+(function (Api) {
+    var Acounting = /** @class */ (function () {
+        function Acounting() {
+        }
+        Acounting.baseUrl = {
+            api: "http://accounting.dayanshop.org/Api/"
+            //api: "http://localhost:58564/Api/",
+            //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
+        };
+        return Acounting;
+    }());
+    Api.Acounting = Acounting;
+})(Api || (Api = {}));
+//# sourceMappingURL=accountingApi.js.map
 var WebPanel;
 (function (WebPanel) {
     //    'use strict'
@@ -141,7 +167,7 @@ var WebPanel;
             $scope.ctrl = this;
             this.apiBaseUrl = "";
             $scope.mas = 'DashboardنتمختControllerمنن';
-            $scope.pageName = $scope.state.data.pageTitle;
+            // $scope.pageName = $scope.state.pageTitle;
         }
         dashboardController.$inject = ['$scope'];
         return dashboardController;
@@ -157,7 +183,7 @@ var Accounting;
         function TransactionController($scope, $http) {
             this.$scope = $scope;
             this.$http = $http;
-            this.apiBaseUrl = WebPanel.Main.baseUrl.api;
+            this.apiBaseUrl = Api.Acounting.baseUrl.api;
             this.pageNumber = 0;
             this.pageSize = 20;
             this.totalCount = 0;
@@ -231,7 +257,7 @@ var Accounting;
         function TransactionDetailController($scope, $http) {
             this.$scope = $scope;
             this.$http = $http;
-            this.apiBaseUrl = WebPanel.Main.baseUrl.api;
+            this.apiBaseUrl = Api.Acounting.baseUrl.api;
             this.pageNumber = 0;
             this.pageSize = 20;
             this.totalCount = 0;

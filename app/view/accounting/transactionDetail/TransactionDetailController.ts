@@ -1,6 +1,6 @@
 ﻿module Accounting {
     export class TransactionDetailController {
-        private apiBaseUrl: string = WebPanel.Main.baseUrl.api;
+        private apiBaseUrl: string = Api.Acounting.baseUrl.api;
         private pageNumber: number = 0;
         private pageSize: number = 20;
         private totalCount: number = 0;

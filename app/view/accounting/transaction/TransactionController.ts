@@ -1,7 +1,7 @@
 ﻿/// <reference path="transactionmodels.ts" />
 module Accounting {
     export class TransactionController {
-        private apiBaseUrl: string = WebPanel.Main.baseUrl.api;
+        private apiBaseUrl: string = Api.Acounting.baseUrl.api;
         private transactions: TransactionDto[];
         private pageNumber: number = 0;
         private pageSize: number = 20;
