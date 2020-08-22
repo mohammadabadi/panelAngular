@@ -4,7 +4,7 @@ var WebPanel;
         function Routes() {
         }
         Routes.configureRoutes = function ($stateProvider, $urlRouterProvider, $locationProvider) {
-            var basePaths = '/view';
+            var basePaths = '/microfronts';
             $urlRouterProvider.otherwise("/dashboard");
             $locationProvider.hashPrefix('');
             $stateProvider
@@ -33,17 +33,6 @@ var WebPanel;
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
                 data: { pageTitle: 'مدیریت سند ها' },
                 controller: "TransactionController",
-                // resolve: {
-                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                //             return $ocLazyLoad.load({
-                //                 name: 'WebApp',
-                //                 insertBefore: '#ng_load_plugins_before',
-                //                 files: [
-                //                     basePaths + '/api/Api.ts',
-                //                 ]
-                //             });
-                //         }]
-                // }
             })
                 //transactionDetail
                 .state('transactionDetail', {
@@ -51,17 +40,6 @@ var WebPanel;
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                 data: { pageTitle: 'دفتر روزنامه' },
                 controller: "TransactionDetailController",
-                // resolve: {
-                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                //             return $ocLazyLoad.load({
-                //                 name: 'WebApp',
-                //                 insertBefore: '#ng_load_plugins_before',
-                //                 files: [
-                //                     basePaths + '/api/Api.ts',
-                //                 ]
-                //             });
-                //         }]
-                // }
             });
             // $locationProvider.html5Mode({
             //    enabled: true,

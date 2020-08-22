@@ -50,7 +50,7 @@ gulp.task('concatfiles-js', async function () {
     gulp.src([
         paths.app.src + '/app.routes.js',
         paths.app.src + '/app.module.js',
-        paths.app.src + '/view/**/*.js'
+        paths.app.src + '/microfronts/**/*.js'
     ])
         // concat files
         .pipe(concat('app.js'))

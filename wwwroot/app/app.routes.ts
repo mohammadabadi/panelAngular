@@ -2,7 +2,7 @@ module WebPanel {
     export class Routes {
         static $inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
         static configureRoutes($stateProvider: any, $urlRouterProvider: any, $locationProvider: any) {
-            var basePaths = '/view';
+            var basePaths = '/microfronts';
             $urlRouterProvider.otherwise("/dashboard");
             $locationProvider.hashPrefix('');
             $stateProvider
@@ -31,17 +31,17 @@ module WebPanel {
                     templateUrl: basePaths + "/accounting/transaction/transaction.html",
                     data: {pageTitle: 'مدیریت سند ها'},
                     controller: "TransactionController",
-                    resolve:{
-                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load({
-                                name: 'WebApp',
-                                insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                                files: [
-                                    basePaths + '/api/Api.ts',
-                                    ]
-                            });
-                        }]
-                    }
+                    // resolve:{
+                    //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    //         return $ocLazyLoad.load({
+                    //             name: 'WebApp',
+                    //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                    //             files: [
+                    //                 basePaths + '/api/Api.ts',
+                    //                 ]
+                    //         });
+                    //     }]
+                    // }
                  })
             //transactionDetail
                 .state('transactionDetail', {
@@ -49,17 +49,17 @@ module WebPanel {
                     templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                     data: {pageTitle: 'دفتر روزنامه'},
                     controller: "TransactionDetailController",
-                    resolve:{
-                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load({
-                                name: 'WebApp',
-                                insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                                files: [
-                                    basePaths + '/api/Api.ts',
-                                    ]
-                            });
-                        }]
-                    }
+                    // resolve:{
+                    //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    //         return $ocLazyLoad.load({
+                    //             name: 'WebApp',
+                    //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                    //             files: [
+                    //                 basePaths + '/api/Api.ts',
+                    //                 ]
+                    //         });
+                    //     }]
+                    // }
 
                 });
 
