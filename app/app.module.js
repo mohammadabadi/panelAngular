@@ -3,11 +3,6 @@ var WebPanel;
     var Main = /** @class */ (function () {
         function Main() {
         }
-        // static baseUrl = {
-        //     api: "http://accounting.dayanshop.org/Api/"
-        //     //api: "http://localhost:58564/Api/",
-        //     //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
-        // }
         Main.webApp = angular.module('webApp', ["ui.router",
             "ui.bootstrap",
             "oc.lazyLoad",
@@ -22,12 +17,6 @@ var WebPanel;
                 // global configs go here
                 });
             }])
-            //AngularJS v1.3.x workaround for old style controller declarition in HTML
-            //  .config(['$controllerProvider', function ($controllerProvider) {
-            //      // this option might be handy for migrating old apps, but please don't use it
-            //      // in new ones!
-            //      $controllerProvider.allowGlobals();
-            //  }])
             //toastr config
             .config(function (toastrConfig) {
             angular.extend(toastrConfig, {

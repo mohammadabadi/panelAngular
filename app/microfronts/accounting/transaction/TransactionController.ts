@@ -36,17 +36,10 @@ module Accounting {
             var start = Math.max(1, currentPageNumber - count);
             var l = Math.ceil(total / pageSize);
             var last = Math.min(l, currentPageNumber + count);
-            //if (start > 1) {
-            //    list.push(1);
-            //    list.push("<<<");
-            //}
+            
             for (var i = start; i <= last; i++) {
                 list.push(i);
             }
-            //if (last < l) {
-            //    list.push(">>>");
-            //    list.push(l);
-            //}
             return list;
         }
     });

@@ -14,37 +14,21 @@ var WebPanel;
                 templateUrl: basePaths + '/dashboard/dashboard.html',
                 data: { pageTitle: 'پنل مدیریت' },
                 controller: "dashboardController"
-                // resolve: {
-                //     deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                //         return $ocLazyLoad.load({
-                //             name: 'WebApp',
-                //             insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                //             files: [
-                //                 basePaths + '/dashboard/dashboard.js',
-                //                 basePaths + '/dashboard/dashboardController.js',
-                //             ]
-                //         });
-                //     }]
-                // }
             })
-                //transaction
+                //accounting/transaction
                 .state('transaction', {
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
                 data: { pageTitle: 'مدیریت سند ها' },
-                controller: "TransactionController",
+                controller: "TransactionController"
             })
-                //transactionDetail
+                //accounting/transactionDetail
                 .state('transactionDetail', {
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
                 data: { pageTitle: 'دفتر روزنامه' },
-                controller: "TransactionDetailController",
+                controller: "TransactionDetailController"
             });
-            // $locationProvider.html5Mode({
-            //    enabled: true,
-            //    requireBase: false
-            // });
         };
         Routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
         return Routes;
@@ -57,11 +41,6 @@ var WebPanel;
     var Main = /** @class */ (function () {
         function Main() {
         }
-        // static baseUrl = {
-        //     api: "http://accounting.dayanshop.org/Api/"
-        //     //api: "http://localhost:58564/Api/",
-        //     //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
-        // }
         Main.webApp = angular.module('webApp', ["ui.router",
             "ui.bootstrap",
             "oc.lazyLoad",
@@ -76,12 +55,6 @@ var WebPanel;
                 // global configs go here
                 });
             }])
-            //AngularJS v1.3.x workaround for old style controller declarition in HTML
-            //  .config(['$controllerProvider', function ($controllerProvider) {
-            //      // this option might be handy for migrating old apps, but please don't use it
-            //      // in new ones!
-            //      $controllerProvider.allowGlobals();
-            //  }])
             //toastr config
             .config(function (toastrConfig) {
             angular.extend(toastrConfig, {
@@ -163,17 +136,9 @@ var Accounting;
             var start = Math.max(1, currentPageNumber - count);
             var l = Math.ceil(total / pageSize);
             var last = Math.min(l, currentPageNumber + count);
-            //if (start > 1) {
-            //    list.push(1);
-            //    list.push("<<<");
-            //}
             for (var i = start; i <= last; i++) {
                 list.push(i);
             }
-            //if (last < l) {
-            //    list.push(">>>");
-            //    list.push(l);
-            //}
             return list;
         };
     });
@@ -235,17 +200,9 @@ var Accounting;
             var start = Math.max(1, currentPageNumber - count);
             var l = Math.ceil(total / pageSize);
             var last = Math.min(l, currentPageNumber + count);
-            //if (start > 1) {
-            //    list.push(1);
-            //    list.push("<<<");
-            //}
             for (var i = start; i <= last; i++) {
                 list.push(i);
             }
-            //if (last < l) {
-            //    list.push(">>>");
-            //    list.push(l);
-            //}
             return list;
         };
     });
@@ -274,8 +231,6 @@ var Api;
         }
         AcountingApi.baseUrl = {
             api: "http://accounting.dayanshop.org/Api/"
-            //api: "http://localhost:58564/Api/",
-            //template: "/theTba-Contents/Components/Warehouse/Templates/app/pages/"
         };
         return AcountingApi;
     }());
