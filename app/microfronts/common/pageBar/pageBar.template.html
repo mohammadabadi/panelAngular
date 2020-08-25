@@ -1,0 +1,15 @@
+<!-- BEGIN PAGE HEADER-->
+    <ul class="pageBar-ul">
+        <li class="">
+            <a class="title-page" ui-sref="dashboard">
+                <h5 class="title-page">داشبورد</h5>
+            </a>
+        </li>
+        <li ng-repeat="item in $root.urlData">
+            <span> / </span>
+            <a ui-sref="{{item.pageUrl}}" data-ng-bind="item.pageTitle">
+                <h5 class="title-page">  {{item.pageTitle}} </h5>
+            </a>
+            
+        </li>
+    </ul>

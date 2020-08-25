@@ -27,6 +27,15 @@ module WebPanel {
                 target: 'body'
             });
         })
+        .run(($rootScope, $state) => {
+            $rootScope.$on('$locationChangeSuccess', function () {
+                $rootScope.$on('$viewContentLoaded', function(){
+                    //Here your view content is fully loaded !!
+                    $rootScope.urlData = $state.current.data;
+                    $rootScope.title = $rootScope.urlData[$rootScope.urlData.length - 1].pageTitle;
+                  });
+                
+        })})
         // Routing
             .config(WebPanel.Routes.configureRoutes);
     }

@@ -7,8 +7,7 @@ var WebPanel;
             $scope.ctrl = this;
             this.apiBaseUrl = "";
             // this.routeUrl = "/Accounting/@index.dn/";
-            $scope.hello = 'hello fdsfdf';
-            $scope.pageName = "پنل مدیریت | ";
+            // $scope.hello = 'hello fdsfdf';
         }
         AppController.$inject = ['$scope'];
         return AppController;

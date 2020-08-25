@@ -61645,7 +61645,7 @@ body {
     .pageBox{
       height:50px;
       position:relative;
-  }
+    }
     .pageUl {
         margin: 0;
         padding: 0;
@@ -61653,60 +61653,139 @@ body {
         display: -ms-flexbox;
         display: flex;
     }
-        .pageUl li {
-            list-style: none;
-            direction: rtl;
-            float: right;
-            background: transparent;
-            padding: 0;
-            margin-left: 5px;
-            display: inline-block;
-        }
-            .pageUl li a {
-                color: #7E8299;
-                line-height: 33px;
-                padding: 7px 11px;
-                font-size: 14px;
-                text-align: center;
-                border-radius: 6px;
-                height: 2.25rem;
-                min-width: 2.25rem;
-                padding: 0.5rem;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                position: relative;
-                font-size: 0.9rem;
-                line-height: 1.5rem;
-                font-weight: 500;
-                border-radius: 0.42rem;
-                cursor: pointer;
-            }
-            .pageUl li.active a, .pageUl li.active a i {
-                color: #ffffff;
-                background: #3699FF;
-            }
-            .pageUl li a:hover, .pageUl li a:focus, .pageUl li a.active {
-                color: #ffffff;
-                background: #3699FF;
-            }
-            .pageUl li a:hover i , .pageUl li a:focus i , .pageUl li a.active i {
-                color: #ffffff;
-                background: #3699FF;
-            }
-            .btnLi {
-                background-color: #ecf1f6;
-            }
-            .pageUl li a i {
-                font-size: 0.6rem;
-                text-align: center;
-                display: inline-block;
-                line-height: 17px;
-                color: #B5B5C3;
-                -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
-                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
-                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
-            }
+    .pageUl li {
+        list-style: none;
+        direction: rtl;
+        float: right;
+        background: transparent;
+        padding: 0;
+        margin-left: 5px;
+        display: inline-block;
+    }
+    .pageUl li a {
+        color: #7E8299;
+        line-height: 33px;
+        padding: 7px 11px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 6px;
+        height: 2.25rem;
+        min-width: 2.25rem;
+        padding: 0.5rem;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        position: relative;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        border-radius: 0.42rem;
+        cursor: pointer;
+    }
+    .pageUl li.active a, .pageUl li.active a i {
+        color: #ffffff;
+        background: #3699FF;
+    }
+    .pageUl li a:hover, .pageUl li a:focus, .pageUl li a.active {
+        color: #ffffff;
+        background: #3699FF;
+    }
+    .pageUl li a:hover i , .pageUl li a:focus i , .pageUl li a.active i {
+        color: #ffffff;
+        background: #3699FF;
+    }
+    .btnLi {
+        background-color: #ecf1f6;
+    }
+    .pageUl li a i {
+        font-size: 0.6rem;
+        text-align: center;
+        display: inline-block;
+        line-height: 17px;
+        color: #B5B5C3;
+        -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+    }
+    .title-page-error{
+      text-align: center;
+    }
+    .title-page-error h1{
+      font-weight: bold !important;
+    }
+    .title-error{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .title-error>div
+    {
+      padding-right:30px;
+      border-right:1px solid #ddd;
+      position:relative;
+    }
+    .title-error>div::before
+    {
+      position:absolute;
+      content:'';
+    box-shadow: 7px 0px 2px 0px #444 inset;
+    }
+    .title-error p{
+      font-size: 45px; 
+      font-weight: bolder; 
+      color: #3699FF;
+      padding: 0 0 20px 0;
+    }
+    .title-error h2{
+      font-weight: bold !important;
+    }
+    .title-error h5{
+      padding: 5px 0;
+      font-weight: bold !important;
+    }
+    .svg-error{
+      text-align: center;
+      display: inline-block;
+    }
+    .center-outer {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    .center-inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .bubbles {
+      display: inline-block;
+      position: relative;
+    }
+    .bubbles p {
+      position: relative;
+      z-index: 2;
+    }
+    .individual-bubble {
+      position: absolute;
+      border-radius: 100%;
+      bottom: 40px;
+      background-color: hsla(210, 100%, 67%, 0.801);
+      z-index: 1;
+    }
+    .pageBar-ul{
+      display: inline-block;
+      list-style: none;
+      padding: 0px 0px;
+      margin: 0;
+    }
+    .pageBar-ul li{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .pageBar-ul li a{
+      color: #1e1e2d;
+    }
+        

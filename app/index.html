@@ -2,7 +2,7 @@
 <html ng-app="webApp" direction="rtl" dir="rtl" style="direction: rtl" ng-controller="AppController">
     <head>
         <base href="/">
-        <title>{{pageName}}</title>
+        <title>داشبورد | {{$root.title}}</title>
         <meta http-equiv="Content-Language" content="fa" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,7 +116,9 @@
                         <!--begin::Container-->
                         <div class="container-fluid">
                             <!--begin::Dashboard-->
-                            <ui-view></ui-view>
+                            <ui-view>
+                               
+                            </ui-view>
                             <!--end::Dashboard-->
                         </div>
                         <!--end::Container-->

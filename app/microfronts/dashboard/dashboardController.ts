@@ -1,5 +1,4 @@
-﻿
-module WebPanel {
+﻿module WebPanel {
     //    'use strict'
     export class dashboardController {
         private apiBaseUrl: string;
@@ -10,12 +9,8 @@ module WebPanel {
             private $scope: any) {
             $scope.ctrl = this;
             this.apiBaseUrl = "";
-            $scope.mas = 'DashboardنتمختControllerمنن';
-            // $scope.pageName = $scope.state.pageTitle;
+            //$scope.mas = 'DashboardنتمختControllerمنن';
         }
-
     }
-
     WebPanel.Main.webApp.controller('dashboardController', dashboardController);
-
 }
