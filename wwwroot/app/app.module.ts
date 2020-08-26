@@ -33,9 +33,9 @@ module WebPanel {
                     //Here your view content is fully loaded !!
                     $rootScope.urlData = $state.current.data;
                     $rootScope.title = $rootScope.urlData[$rootScope.urlData.length - 1].pageTitle;
-                  });
-                
-        })})
+                });
+            })
+        })
         // Routing
             .config(WebPanel.Routes.configureRoutes);
     }

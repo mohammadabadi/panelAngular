@@ -44516,8 +44516,7 @@ code {
 
 .table.table-head-bg thead tr, .table.table-head-bg thead th {
   background-color: #F3F6F9;
-  border-bottom: 0;
-  letter-spacing: 1px; }
+  border-bottom: 0; }
   .table.table-head-bg thead tr:first-child, .table.table-head-bg thead th:first-child {
     border-top-right-radius: 0.42rem;
     border-bottom-right-radius: 0.42rem; }

@@ -12,16 +12,15 @@ var WebPanel;
                 .state('dashboard', {
                 url: "/dashboard",
                 templateUrl: basePaths + '/dashboard/dashboard.html',
-                pageTitle: 'پنل مدیریت',
-                data: [{ pageTitle: 'پنل مدیریت',
-                        pageUrl: 'dashboard' }],
+                data: [
+                    { pageTitle: 'پنل مدیریت', pageUrl: 'dashboard' }
+                ],
                 controller: "dashboardController"
             })
                 //accounting/transaction
                 .state('transaction', {
                 url: "/transaction",
                 templateUrl: basePaths + "/accounting/transaction/transaction.html",
-                pageTitle: 'مدیریت سند ها',
                 data: [
                     { pageTitle: 'حسابداری ', pageUrl: '' },
                     { pageTitle: 'مدیریت سند ها', pageUrl: 'transaction' }
@@ -32,7 +31,6 @@ var WebPanel;
                 .state('transactionDetail', {
                 url: "/transactionDetail",
                 templateUrl: basePaths + "/accounting/transactionDetail/transactionDetail.html",
-                pageTitle: 'دفتر روزنامه',
                 data: [
                     { pageTitle: 'حسابداری ', pageUrl: '' },
                     { pageTitle: 'دفتر روزنامه', pageUrl: 'transactionDetail' }
@@ -43,7 +41,9 @@ var WebPanel;
                 .state('forbidden', {
                 url: "/forbidden",
                 templateUrl: basePaths + '/error/403.html',
-                data: [{ pageTitle: 'عدم دسترسی', pageUrl: 'forbidden' }],
+                data: [
+                    { pageTitle: 'عدم دسترسی', pageUrl: 'forbidden' }
+                ],
             })
                 // 404
                 .state('notfound', {
